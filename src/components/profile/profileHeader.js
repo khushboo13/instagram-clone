@@ -3,13 +3,7 @@ import useUser from '../../hooks/use-user';
 import { updateFollowing, updateFollowers } from '../../services/firebase';
 
 /* eslint-disable react/prop-types */
-export default function ProfileHeader({
-  photosCount,
-  profile,
-  followerCount,
-  followUser,
-  setFollowerCount
-}) {
+export default function ProfileHeader({ photosCount, profile, followerCount, setFollowerCount }) {
   const { user } = useUser();
   const [isFollowingProfile, setIsFollowingProfile] = useState(false);
   useEffect(() => {
